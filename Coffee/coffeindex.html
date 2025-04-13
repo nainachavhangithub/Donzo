@@ -1,0 +1,13 @@
+<div class="coffee-container">
+    <h2>Coffee Menu</h2>
+    <div class="coffee-list">
+      <div *ngFor="let coffee of coffees" class="coffee-card">
+        <img [src]="coffee.image" alt="{{ coffee.name }}" />
+        <h3>{{ coffee.name }}</h3>
+        <p>{{ coffee.description }}</p>
+        <strong>₹{{ coffee.price }}</strong>
+        <button (click)="addToCart(coffee)">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+  
